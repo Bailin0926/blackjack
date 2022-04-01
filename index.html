@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/data/css/style.css">
+    <title>Blackjack</title>
+</head>
+
+<body onload="loadGame();">
+
+    <div id="dealer-cards">
+        <p id="dealer-card-hint" class="cards-hint dealer-card-hint"></p>
+    </div>
+    <div id="player-cards">
+        <p id="player-card-hint" class="cards-hint player-card-hint"></p>
+    </div>
+
+    <div id="result">
+        <p id="result-main"></p>
+        <p id="result-more"></p>
+    </div>
+
+
+
+    <div id="bet-chips"><p id="total-chips"></p></div>
+
+    <div id="player-table">
+        <p id="player-money"></p>
+        <div id="table-chip">
+            <img id="add-chip-0" class="chip" onclick="addChip(0);" src="/data/img/chip/0.png">
+            <img id="add-chip-1" class="chip" onclick="addChip(1);" src="/data/img/chip/1.png">
+            <img id="add-chip-2" class="chip" onclick="addChip(2);" src="/data/img/chip/2.png">
+            <img id="add-chip-3" class="chip" onclick="addChip(3);" src="/data/img/chip/3.png">
+            <img id="add-chip-4" class="chip" onclick="addChip(4);" src="/data/img/chip/4.png">
+        </div>
+
+        <div id="table-start" class="table-down">
+            <button id="add-chip-max" class="btn btn-secondary" onclick="maxChip();">Max. bet</button>
+            <button id="start-game" class="btn btn-main" onclick="startGame();">Deal</button>
+            <button id="add-chip-clear" class="btn btn-secondary" onclick="clearChip();">Clear</button>
+        </div>
+
+        <div id="table-play" class="table-down">
+            <button id="game-double" class="btn btn-main" onclick="gameSelect(0);">Double</button>
+            <button id="game-stand" class="btn btn-main" onclick="gameSelect(1);">Stand</button>
+            <button id="game-hit" class="btn btn-main" onclick="gameSelect(2);">Hit</button>
+        </div>
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script src="/data/js/blackjack.js"></script>
+<script src="/data/js/animation.js"></script>
+
+</html>
